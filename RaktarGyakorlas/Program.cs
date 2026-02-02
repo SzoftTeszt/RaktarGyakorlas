@@ -77,7 +77,7 @@ namespace RaktarGyakorlas
             Console.Write("Ár: ");
             decimal price = decimal.Parse(Console.ReadLine());
 
-            //Ekszerek.UjAruFelvesz(title, description, price);
+            Ekszerek.UjAruFelvesz(title, description, price);
             Console.WriteLine("✔ Áru felvéve");
         }
 

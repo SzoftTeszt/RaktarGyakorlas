@@ -1,14 +1,15 @@
 ﻿using System;
 using RaktarGyakorlas.Modell;
+using RaktarGyakorlas.Repository;
 
 namespace RaktarGyakorlas
 {
     internal class Program
     {
-        //static AruNyilvantartas Ekszerek;
+        static AruNyilvantartas Ekszerek;
         static void Main(string[] args)
         {
-            //Ekszerek = new AruNyilvantartas();
+            Ekszerek = new AruNyilvantartas();
             ConsoleKey key;
 
             do
@@ -83,7 +84,7 @@ namespace RaktarGyakorlas
         static void OsszesAru()
         {
             List<Aru> lista = new List<Aru>();
-            //lista = Ekszerek.OsszesAruLekerdez();
+            lista = Ekszerek.OsszesAruLekerdez();
 
             if (!lista.Any())
             {

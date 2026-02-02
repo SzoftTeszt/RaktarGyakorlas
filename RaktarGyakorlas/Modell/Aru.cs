@@ -6,7 +6,33 @@ using System.Threading.Tasks;
 
 namespace RaktarGyakorlas.Modell
 {
-    internal class Aru
+    public class Aru
     {
+        public Aru()
+        {
+        }
+
+        public Aru(int id, string title, string description, decimal price)
+        {
+            Id = id;
+            Title = title;
+            Description = description;
+            Price = price;
+        }
+
+        public Aru(string row)
+        {
+            var values = row.Split(';');
+            Id = int.Parse(values[0]);
+            Title = values[1];
+            Description = values[2];
+            Price = decimal.Parse(values[3]);
+        }
+        public int Id { get; set; }
+        public string Title { get; set; } = "";
+        public string Description { get; set; } = string.Empty;
+        public decimal Price { get; set; }
+
+       
     }
 }
